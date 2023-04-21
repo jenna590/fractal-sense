@@ -5,17 +5,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.typekit.net/byj0jup.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
   </head>
   <body>
-    <div id = "message">Fractal Sense <br>
-      <p> Directions: <br>1. press start <br> 2. make sound into the microphone<br>3. press capture to take a photo</p>
-      <button id="startButton">start</button>
+    <div id = "message">FRACTAL SENSE <br>
+      <p>A camera filter tool used to distort live image and respond to audio at different levels. First created as part of a daily coding practice, <i>Fractal Sense</i> branched off into an exploration of its own. The filter consists of fractals. When adding sound, the triangles produce smaller ones of the same proportions. This is a phenomenon that also occurs in the natural world. The book featured on the right includes still images from footage collected with the tool in Bryant Park while my laptop sat overheating on a large rock.<br> </p>
+      <button id="startButton" type="button" class="btn btn-light">start</button>
 
     </div>
     <button id="aboutButton">about</button>
+    <button id="screenCapture">capture</button>
     <!-- <div class="sidebar">
       <ul>
         <li>
@@ -28,7 +30,15 @@
         </li>
       </ul>
     </div> -->
-    
+    <div id="documentation" class="prim">
+      <img class="d-block w-100" src="page5.jpg" alt="First slide">
+      <img class="d-block w-100" src="page1.jpg" alt="First slide">
+      <img class="d-block w-100" src="page2.jpg" alt="First slide">
+      <img class="d-block w-100" src="page3.jpg" alt="First slide">
+      <img class="d-block w-100" src="page4.jpg" alt="First slide">
+    </div>
+      </div>
+    </div>
     <main>
     </main>
     <script src="sketch2.js">

@@ -1,23 +1,32 @@
 let capture;
 let mic;
+let bn;
 var b1 = document.getElementById('startButton');
       b1.addEventListener('click', function() {
         var start = document.getElementById('message');
         start.style.display = 'none';
+        var pics = document.getElementById('documentation');
+        pics.style.display = 'none';
       });
 var b2 = document.getElementById('aboutButton');
   b2.addEventListener('click', function() {
     var start = document.getElementById('message');
       start.style.display = 'block';
+    var pics = document.getElementById('documentation');
+      pics.style.display = 'block';
   });  
+  var screenshot = document.getElementById('screenCapture');
+    screenshot.addEventListener('click', function(){
+      saveImage();
+    });
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   capture = createCapture(VIDEO);
   capture.size(windowWidth, windowHeight);
   background(255);
-  button = createButton("screen capture");
-  button.position(windowWidth -120, 0, 'fixed');
-  button.mousePressed(saveImage);
+  // bn = createButton("capture");
+  // bn.position(windowWidth -120, 0, 'fixed');
+  // bn.mousePressed(saveImage);
 
   capture.hide();
   mic = new p5.AudioIn();
@@ -62,3 +71,6 @@ function draw() {
 function saveImage() {
   saveCanvas('myCanvas', 'png');
  }
+ function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
